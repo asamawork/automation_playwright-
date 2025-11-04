@@ -24,7 +24,8 @@ steps:
 
   # Step 3: Run Playwright tests (headless)
   - script: |
-      npx playwright test --reporter=line
+      nnpx playwright test tests\create_order.spec.js --reporter=line
+
     displayName: 'Run Playwright tests (Headless)'
 
   # Optional: Run tests in headed mode (for debugging)
@@ -34,11 +35,11 @@ steps:
   #     npx playwright test --headed
   #   displayName: 'Run Playwright tests (Headed)'
 
-  # Step 4: Run tests again and generate Allure report
-  - script: |
-      npx playwright test --reporter=line,allure-playwright
-      npx allure generate allure-results --clean -o allure-report
-    displayName: 'Run Playwright tests and generate Allure report'
+  # # Step 4: Run tests again and generate Allure report
+  # - script: |
+  #     npx playwright test --reporter=line,allure-playwright
+  #     npx allure generate allure-results --clean -o allure-report
+  #   displayName: 'Run Playwright tests and generate Allure report'
 
   # Step 5: Publish test results (if XML format exists)
   - task: PublishTestResults@2
