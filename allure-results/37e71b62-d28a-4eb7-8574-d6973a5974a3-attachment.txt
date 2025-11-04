@@ -1,0 +1,4 @@
+🧾 Verifying total quantity in Order Summary...
+📦 Quantities found in summary: [36]
+✅ Expected Total: 1
+🧮 Actual Total: 36
